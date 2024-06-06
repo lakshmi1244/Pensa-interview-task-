@@ -21,13 +21,6 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 1.0.11
-          
-steps:
-  - name: Run Terraform
-    run: |
-      terraform init
-      terraform apply
-      echo "##[env TF_OUTPUT=$(terraform output -json)]"
 
       - name: 'Terraform Init'
         run: terraform init
